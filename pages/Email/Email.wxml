@@ -1,0 +1,13 @@
+<!--pages/Email/Email.wxml-->
+<view class='contioner'>
+  <view class='centant'>
+    <input class='text' placeholder='输入邮箱'></input>
+    <view class='verification'>
+      <input class='text' placeholder='输入验证码'></input>
+      <button class='btn'>发送验证码</button>
+    </view>
+    <input class='text' placeholder='输入新密码'></input>
+    <input class='text' placeholder='再次输入新密码'></input>
+    <button class='btn'>确定</button>
+  </view>
+</view>

@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/parameter/parameter",
+    "pages/notice/notice",
+    "pages/home/home",
+    "pages/shedlist/shedlist",
+    "pages/set/set",
+    "pages/user/user",
+    "pages/noticetap/noticetap",
+    "pages/useradd/useradd",
+    "pages/machine/machine",
+    "pages/modify/modify",
+    "pages/phone/phone",
+    "pages/Email/Email",
+    "pages/home/aboutus/aboutus",
+    "pages/test/test",
+    "pages/parameter/machine/machine",
+    "pages/parameter/temp/temp",
+    "pages/parameter/humidity/humidity",
+    "pages/parameter/time/time",
+    "pages/register/register",
+    "pages/register2/register2",
+    "pages/register3/register3",
+    "pages/libs/libs",
+    "libs/libs",
+    "pages/useradd/ment/ment",
+    "pages/useradd/operator/operator",
+    "pages/parameter/newhumidity/newhumidity",
+    "pages/parameter/newmachine/machine",
+    "pages/parameter/newtemp/newtemp",
+    "pages/parameter/newtime/newtime",
+    "pages/scanCode/scanCode"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "温控宝"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/shedlist/shedlist",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "监控",
+        "iconPath": "images/008.png",
+        "selectedIconPath": "images/007.png"
+      },
+      {
+        "pagePath": "pages/parameter/parameter",
+        "text": "参数",
+        "iconPath": "images/003.png",
+        "selectedIconPath": "images/004.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "images/001.png",
+        "selectedIconPath": "images/002.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

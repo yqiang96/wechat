@@ -1,0 +1,174 @@
+/* pages/register2/register2.wxss */
+.container{
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  width: 90%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.content{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.content_box{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  margin-bottom: 10px;
+}
+.left{
+  width: 15%;
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.cont{
+  width: 70%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select_box{
+  background: #fff;
+  width: 80%;
+  /* margin: 30rpx auto; */
+  position: relative;
+}
+.select_box>input{
+  font-size: 12px;
+}
+.select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  border:1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20rpx;
+}
+.select_text{
+  font-size: 30rpx;
+  flex: 1;
+}
+.select_img{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_img_rotate{
+  transform:rotate(180deg); 
+}
+.option_box{
+  position: absolute;
+  /* top: 70rpx; */
+  width: 100%;
+  border:1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+  z-index: 100;
+}
+.option{
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+  z-index: 100
+}
+.right{
+  width: 15%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox{
+  zoom: 70%;
+}
+.notes{
+  width: 90%;
+  height: 30px;
+  color: #707070;
+  font-size: 14px;
+}
+.box{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_b{
+  width: 20%;
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.cont_b{
+  width: 60%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right_b{
+  width: 20%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_left{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_right{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  width: 80%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #66a2ff;
+  font-size: 14px;
+  color: white;
+}
+.inputText{
+  width: 100%;
+  border:1px solid #bebebe;
+  border-radius:5px
+}
+.picker{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+/* .content_boxshow{
+  display: none;
+} */

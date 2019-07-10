@@ -1,0 +1,68 @@
+/* pages/phone/phone.wxss */
+/* pages/modify/modify.wxss */
+.contioner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.centant{
+  width: 80%;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.centant>input{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  border: 1px solid #bebebe;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.verification{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+.verification>input{
+  width: 55%;
+  height: 40px;
+  display: flex;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.verification>button{
+  width: 38%;
+  height: 40px;
+  display: flex;
+  font-size: 12px;
+  color: #66a2ff;
+  border: 1px solid #66a2ff;
+  justify-content: center;
+  align-items: center;
+}
+.centant>button{
+  width: 100%;
+  height: 40px;
+  background-color: #66a2ff;
+  color: white;
+  margin: 10px 0;
+  font-size: 16px;
+}
+.centant_text{
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  font-size: 14px;
+  color: #00A8D8;
+}

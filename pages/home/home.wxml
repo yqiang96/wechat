@@ -1,0 +1,45 @@
+
+<view class='continer'>
+  <view class='top'>
+    <view class='icon'>
+      <image src='../../images/yh.png'></image>
+      <text>{{userName}}</text>
+      <text>{{permission}}</text>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='box' bindtap='register'>
+      <text class='iconfont icon-tianjia'></text>
+      <text>添加设备</text>
+    </view>
+    <view class='box' bindtap='noticetap'>
+      <text class='iconfont icon-msnui-alarm-inverse'></text>
+      <text>报警列表</text>
+    </view>
+    <view class='box' bindtap='machine'>
+      <text class='iconfont icon-shebei'></text>
+      <text>我的设备</text>
+    </view>
+    <view class='box' bindtap='user'>
+      <text class='iconfont icon-jibenxinxi'></text>
+      <text>个人信息</text>
+    </view>
+    <view class='box' bindtap='useradd'>
+      <text class='iconfont icon-Management'></text>
+      <text>用户管理</text>
+    </view>
+    <view class='box' bindtap='modify'>
+      <text class='iconfont icon-xiugai'></text>
+      <text>修改密码</text>
+    </view>
+    <view class='box' bindtap='aboutus'>
+       <text class='iconfont icon-guanyuwomen1'></text>
+      <text>关于我们</text>
+    </view>
+    <view class='box'></view>
+    <view class='box'></view>
+    <view class='btn'>
+      <button class='btn_t' bindtap='Logout'>退出当前用户</button>
+    </view>
+  </view>
+</view>

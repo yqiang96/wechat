@@ -1,0 +1,31 @@
+<!--pages/useradd/operator/operator.wxml-->
+<view class='container'>
+    <view class='form_input'>
+      <view class='user'>
+        <text>用户名：</text>
+      </view>
+      <view class='input_b'>
+        <input class='name' name="userName" placeholder="请输入用户名或者手机号码"bindinput="userNameInput" />
+      </view>
+    </view>
+    <view class='password_input'>
+      <view class='word'>
+        <text>密码：</text>
+      </view>
+      <view class='input_b'>
+    <input class='password'password="true"name="password"placeholder="请输入密码"bindinput="passwordInput"/>
+      </view>
+    </view>
+    <view class="section section_gap">
+      <view class="section_title">管理的大棚</view>
+      <checkbox-group name="checkbox" bindchange="checkboxChange">
+        <label wx:for='{{data}}' wx:key='{{no}}'>
+          <checkbox class='check' value='{{item.id}}'/>{{item.name}}
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="btn-area">
+      <button class='btn btn1' bindtap='resetInput'>取消</button>
+      <button class='btn' bindtap='submitInput'>确定</button>
+    </view>
+</view>

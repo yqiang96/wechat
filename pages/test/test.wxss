@@ -1,0 +1,5 @@
+.text{
+  width: 95%;
+  height: 35px;
+  border: 1px #000 solid;
+}

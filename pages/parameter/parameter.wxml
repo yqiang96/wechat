@@ -1,0 +1,248 @@
+<view class='container'>
+  <view class='top' id="top">
+    <view class='nav'>
+      <view class="navbar">
+        <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ?'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <!--电机设置-->
+  <view hidden="{{currentTab!==0}}">
+    <scroll-view scroll-y="true" style='height:{{scrollViewHeith}}px;'>
+      <view class='content'>
+        <view class='machine' wx:for="{{data}}" wx:key="id" wx:for-index="idx" id="{{item.id}}" bindtouchstart="bindTouchStart2" bindtouchend="bindTouchEnd2" bindlongtap="bingLongTap2" bindtap="bindTap2">
+          <view class='m_top'>
+            <view class='m_bar'>
+              <block wx:for="{{item.performers}}" wx:for-item="performers" wx:key="{{id}}">
+                <view class='ls_bar' wx:if="{{performers.isChecked==true}}">
+                  <text>{{performers.name}}</text>
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class='m_cont'>
+            <view class='l_bar'>
+              <view class='data'>
+                <text>轨道长度(厘米)：{{item.trackMaxLength}}</text>
+              </view>
+              <view class='data'>
+                <text>全开时长（秒）：{{item.trackOpenTime}}</text>
+              </view>
+            </view>
+            <view class='l_bar'>
+              <view class='data'>
+                <text>风口宽度(厘米)：{{item.tuyereMaxWidth}}</text>
+              </view>
+              <view class='data'>
+                <text>全开时长（秒）：{{item.tuyereOpenTime}}</text>
+              </view>
+            </view>
+            <view class='box {{unitId==item.id?"":"hidden"}}'>
+              <text class='data'>是否有限位开关：</text>
+              <text class='data'>{{item.isCount}}</text>
+              <text class='data'>是否有计数器：</text>
+              <text class='data'>{{item.isLimit}}</text>
+              <text class='data'>分级级数（级）：</text>
+              <text class='data'>{{item.levelNumber}}</text>
+            </view>
+          </view>
+          <view class='m_last' bindtap='onShowChange' id="{{item.id}}">
+            <view class='{{unitId==item.id?"":"hidden"}}'>
+              <text class="iconfont icon-jiantou9" style='font-size:15px;'></text>
+              <text>隐藏详情</text>
+            </view>
+            <view class='{{unitId==item.id?"hidden":""}}'>
+              <text class="iconfont icon-jiantou9" style='font-size:15px;'></text>
+              <text>展开查看详情</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='post' bindtap='machine'>
+        <view class='cricle'>
+          <text class='iconfont icon-tianjia'></text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!--温度设置-->
+  <view hidden="{{currentTab!==1}}">
+    <scroll-view scroll-y="true" style='height:{{scrollViewHeith}}px;'>
+      <view class='content'>
+        <view class='temp' wx:for="{{temp}}" wx:key="id" wx:for-index="idx" id="{{item.id}}" bindtouchstart="bindTouchStart3" bindtouchend="bindTouchEnd3" bindlongtap="bingLongTap3" bindtap="bindTap3">
+          <view class='m_top'>
+            <view class='m_bar'>
+              <block wx:for="{{item.performers}}" wx:for-item="performers" wx:key="{{id}}">
+                <view class='ls_bar' wx:if="{{performers.isChecked==true}}">
+                  <text>{{performers.name}}</text>
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class='m_cont'>
+            <view class='row'>
+              <view class='left_row'>
+                <text>标准温度值（℃）:</text>
+              </view>
+              <view class='right_row'>
+                <text>{{item.standardTempera}}</text>
+              </view>
+            </view>
+            <view class='row'>
+              <view class='left_row'>
+                <text>标准温度范围（℃）</text>
+              </view>
+              <view class='right_row'></view>
+            </view>
+            <view class='row'>
+              <view class='row_box'>
+                <text>下限：{{item.suitableLower}}</text>
+              </view>
+              <view class='row_box'>
+                <text>上限：{{item.suitableUpper}}</text>
+              </view>
+            </view>
+            <view class='row'>
+              <view class='left_row'>
+                <text>报警温度范围（℃）</text>
+              </view>
+              <view class='right_row'></view>
+            </view>
+            <view class='row'>
+              <view class='row_box'>
+                <text>下限：{{item.alarmLower}}</text>
+              </view>
+              <view class='row_box'>
+                <text>上限：{{item.alarmUpper}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='post' bindtap='temp'>
+        <view class='cricle'>
+          <text class='iconfont icon-tianjia'></text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!--湿度设置-->
+  <view hidden="{{currentTab!==2}}">
+    <scroll-view scroll-y="true" style='height:{{scrollViewHeith}}px;'>
+      <view class='content'>
+        <view class='temp' wx:for="{{Humidity}}" wx:key="id" wx:for-index="idx" id="{{item.id}}" bindtouchstart="bindTouchStart4" bindtouchend="bindTouchEnd4" bindlongtap="bingLongTap4" bindtap="bindTap4">
+          <view class='m_top'>
+            <view class='m_top'>
+              <view class='m_bar'>
+                <block wx:for="{{item.performers}}" wx:for-item="performers" wx:key="{{id}}">
+                  <view class='ls_bar' wx:if="{{performers.isChecked==true}}">
+                    <text>{{performers.name}}</text>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+          <view class='m_cont'>
+            <view class='row'>
+              <view class='left_row'>
+                <text>标准温度值（℃）:</text>
+              </view>
+              <view class='right_row'>
+                <text>{{item.standardHumidity}}</text>
+              </view>
+            </view>
+            <view class='row'>
+              <view class='left_row'>
+                <text>标准温度范围（℃）</text>
+              </view>
+              <view class='right_row'></view>
+            </view>
+            <view class='row'>
+              <view class='row_box'>
+                <text>下限：{{item.suitableLower}}</text>
+              </view>
+              <view class='row_box'>
+                <text>上限：{{item.suitableUpper}}</text>
+              </view>
+            </view>
+            <view class='row'>
+              <view class='left_row'>
+                <text>报警温度范围（℃）</text>
+              </view>
+              <view class='right_row'></view>
+            </view>
+            <view class='row'>
+              <view class='row_box'>
+                <text>下限：{{item.alarmLower}}</text>
+              </view>
+              <view class='row_box'>
+                <text>上限：{{item.alarmUpper}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='post' bindtap='humidity'>
+        <view class='cricle'>
+          <text class='iconfont icon-tianjia'></text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 定时设置 -->
+  <view hidden="{{currentTab!==3}}">
+    <scroll-view scroll-y="true" style='height:{{scrollViewHeith}}px;'>
+      <view class='content'>
+        <view class='time' wx:for="{{time}}" wx:key="{{id}}" id="{{item.id}}" bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd" bindlongtap="bingLongTap" bindtap="bindTap">
+          <view class='time_top'>
+            <view class='time_left'>
+              <text>{{item.content}}</text>
+            </view>
+            <view class='time_right'>
+              <view class="body-view" wx:if="{{item.statut=='开启'}}">
+                <switch color='#bebebe' checked="statut" bindchange="switch1Change" />
+              </view>
+              <view class="body-view" wx:else>
+                <switch color='#bebebe' bindchange="switch1Change" />
+              </view>
+            </view>
+          </view>
+          <view class='time_bar'>
+            <view class='bar_lt' wx:if="{{item.tcycle==0}}">
+              <text>重复：</text>
+              <text>单次</text>
+            </view>
+            <view class='bar_lt' wx:elif="{{item.tcycle==1}}">
+              <text>重复：</text>
+              <text>每天</text>
+            </view>
+            <view class='bar_lt' wx:elif="{{item.tcycle==7}}">
+              <text>重复：</text>
+              <text>每周</text>
+            </view>
+            <view class='bar_lt' wx:else>
+              <text>重复：</text>
+              <text>自定义</text>
+            </view>
+            <view class='bar_lt'>
+              <text>指令：</text>
+              <text>{{item.operation}}</text>
+            </view>
+          </view>
+          <view class='time_bar'>
+            <block wx:for="{{item.performers}}" wx:for-item="performers" wx:key="{{id}}">
+              <view class='ls_bar' wx:if="{{performers.isChecked==true}}">
+                <text>{{performers.name}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class='post' bindtap='times'>
+        <view class='cricle'>
+          <text class='iconfont icon-tianjia'></text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

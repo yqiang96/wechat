@@ -1,0 +1,72 @@
+/* pages/useradd/useradd.wxss */
+
+.centant{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.box{
+  width: 90%;
+  height: 60px;
+  background-color:#00A8D8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.box>image{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.box_text{
+  width: 70%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.box_icon{
+  width: 10%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.box_icon>text{
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.box_dashet{
+  width: 90%;
+  height: 60px;
+  border: 2px dashed #bebebe;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.box_jia{
+  width: 15%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box_jia>text{
+  font-size: 30px;
+  color: #00A8D8;
+}
+.jia_text{
+  width: 70%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: #bebebe;
+}

@@ -1,0 +1,79 @@
+<view class='container'>
+  <view class='top'>
+    <view class='bar'>
+      <view class='kong'></view>
+      <view class='bar_icon'>大棚1
+        <text class="iconfont icon-jiantou9" style='font-size:15px;'></text>
+      </view>
+      <view class='top_icon'>
+        <text class="iconfont icon-jiahao text_icon" style='font-size:20px;'></text>
+      </view>
+    </view>
+    <view class='nav'>
+      <view class="navbar">  
+        <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ?'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+      </view>  
+    </view>
+  </view>
+  <view hidden="{{currentTab!==0}}"> 
+    <scroll-view scroll-y="true" style='height:380px;'>
+      <view class='content'>
+        <view class='notice' wx:for="{{data.data}}" wx:key="no">
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警类型：</text>
+            </view>
+            <view class='notice_right'>
+              <text>{{item.alarmType}}</text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>危险指数：</text>
+            </view>
+            <view class='notice_right'>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing1"></text>
+              <text class="iconfont icon-xing1"></text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警时间：</text>
+            </view>
+            <view class='notice_right'>
+              <text>{{item.alarmTime}}</text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警设备：</text>
+            </view>
+            <view class='notice_right'>
+              <text>{{item.alarmDevice}}</text>
+            </view>
+          </view>
+
+          <view class='notice_last'>
+             <view class='notice_laft'>
+              <text>报警详情：</text>
+            </view>
+            <view class='notice_right'>
+              <text>{{item.alarmDetails}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>  
+  </view>
+  <view hidden="{{currentTab!==1}}">  
+    <scroll-view scroll-y="true" style='height:380px;'>
+      <view class='content'>
+
+      
+      </view>
+    </scroll-view>
+  </view>
+</view>

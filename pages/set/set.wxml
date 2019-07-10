@@ -1,0 +1,209 @@
+<view class='container'>
+  <view class='title'>
+    <text>基本设置</text>
+    <view class='updata' bindtap='updata'>保存设置</view>
+  </view>
+  <view class='set'>
+    <view class='set_box'>
+      <view class='set_line'>
+        <view class='set_text'>
+          <text>采集间隔时间(分钟)</text>
+        </view>
+        <view class='set_input'>
+          <input placeholder='{{collectCycle}}' type='text' placeholder-class='center'></input>
+        </view>
+      </view>
+    </view>
+    <view class='set_box'>
+      <view class='set_line'>
+        <view class='set_text'>
+          <text>推送间隔时间(分钟)</text>
+        </view>
+        <view class='set_input'>
+          <input placeholder='{{pushCycle}}' type='text' placeholder-class='center'></input>
+        </view>
+      </view>
+    </view>
+    <view class='set_left'>
+        <view class='set_text'>
+          <text>是否有雨水传感器</text>
+        </view>
+        <view class='set_btn'>
+          <view class="body-view">
+            <switch color='#66a2ff' checked="{{checkedA}}" bindchange="switch1Change" />
+          </view>
+        </view>
+    </view>
+    <view class='notes'>
+      <text>注:若无雨水传感器,但仍旧选着启用,则默认无雨</text>
+    </view>
+    <view class='set_box_line'>
+      
+        <view class='set_text'>
+          <text>是否开启夜间模式</text>
+        </view>
+        <view class='set_btn'>
+          <view class="body-view">
+            <switch color='#66a2ff' checked="{{checkedB}}" bindchange="switch2Change" />
+          </view>
+        </view>
+    
+    </view>
+    <view class='notes'>
+      <text>注:夜间模式开启,模式会自动切换成手动模式</text>
+    </view>
+
+    <view class='set_left'>
+      <text>夜间模式起止时间</text>
+    </view>
+
+    <view class='set_box'>
+      <view class='set_kong'>
+        <view class='box_input'>
+          <input placeholder='06:00' type='text' placeholder-class='center'></input>
+        </view>
+        <view class='box_line'>
+          <view></view>
+        </view>
+        <view class='box_input'>
+          <input placeholder='18:00' type='text' placeholder-class='center'></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='title'>
+    <text>晨风设置</text>
+  </view>
+  <view class='set'>
+    <view class='set_box'>
+      <view class='set_line'>
+        <view class='set_text'>
+          <text>是否启用晨风</text>
+        </view>
+        <view class='set_btn'>
+          <view class="body-view">
+            <switch color='#66a2ff' checked="{{checkedC}}" bindchange="switch3Change" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='set_box'>
+      <view class='set_line'>
+        <view class='set_text'>
+          <text>放风温度(℃)</text>
+        </view>
+        <view class='box_l'>
+          <input placeholder='{{firstBlowerTempera}}' type='text' placeholder-class='center'></input>
+        </view>
+      </view>
+    </view>
+    <view class='set_box'>
+      <view class='set_line'>
+        <view class='set_text'>
+          <text>放风开口距离(厘米)</text>
+        </view>
+        <view class='box_l'>
+          <input placeholder='{{firstBlowerDistance}}' type='text' placeholder-class='center'></input>
+        </view>
+      </view>
+    </view>
+    <view class='notes'>
+      <text>注:默认值为电机设置中的风口重叠宽度</text>
+    </view>
+    <view class='title'>
+      <text>报警设置</text>
+    </view>
+    <view class='set_box'>
+      <view class='set_line'>
+        <view class='set_b'>
+          <text>主手机号</text>
+        </view>
+        <view class='set_i'>
+          <input placeholder='{{mainPhone}}' type='text' placeholder-class='center'></input>
+        </view>
+      </view>
+    </view>
+    <view class='set_box'>
+      <view class='set_line'>
+        <view class='set_b'>
+          <text>备用手机号码</text>
+        </view>
+        <view class='set_i'>
+          <input placeholder='{{spacePhone}}' type='text' placeholder-class='center'></input>
+        </view>
+      </view>
+    </view>
+    <view class='set_box'>
+      <view class='title_left'>
+        <text>报警方式选择</text>
+      </view>
+    </view>
+    <view class='set_check'>
+      <view class='check_text'>
+        <text>温度参数超限报警</text>
+      </view>
+      <view class='check_box'>
+        <checkbox value="短信发送" />短信发送
+      </view>
+      <view class='check_box'>
+        <checkbox value="电话拨打" />电话拨打
+      </view>
+    </view>
+    <view class='set_check'>
+      <view class='check_text'>
+        <text>设备故障报警</text>
+      </view>
+      <view class='check_box'>
+        <checkbox value="短信发送" />短信发送
+      </view>
+      <view class='check_box'>
+        <checkbox value="电话拨打" />电话拨打
+      </view>
+    </view>
+    <view class='set_check'>
+      <view class='check_text'>
+        <text>停电报警</text>
+      </view>
+      <view class='check_box'>
+        <checkbox value="短信发送" />短信发送
+      </view>
+      <view class='check_box'>
+        <checkbox value="电话拨打" />电话拨打
+      </view>
+    </view>
+
+    <!-- <view class='set_box'>
+      <view class='title_left'>
+        <text>套餐资讯</text>
+      </view>
+    </view>
+    <view class='set_table'>
+      <text>短信套餐</text>
+    </view>
+    <view class='table_box'>
+      <view class="table">
+        <block wx:for="{{listData1}}" wx:key="{{code}}">
+          <view class="tr bg-g">
+            <view class="td">{{item.text}}</view>
+            <view class="td">{{item.type}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='set_table'>
+      <text>短信套餐</text>
+    </view>
+    <view class='table_box'>
+      <view class="table">
+        <block wx:for="{{listData2}}" wx:key="{{code}}">
+          <view class="tr bg-g">
+            <view class="td">{{item.text}}</view>
+            <view class="td">{{item.type}}</view>
+          </view>
+        </block>
+      </view>
+    </view> -->
+
+
+  </view>
+</view>

@@ -1,0 +1,85 @@
+<view class="container">
+  <view class='up'>
+    <view class='head' id="head">
+      <image src='../../images/2.png'></image>
+      <view class='head_top'>
+        <view class='top_a'>
+          <text class='iconfont icon-2'></text>
+          <text>{{city}}</text>
+          <text class='text_a'>{{weatherDesc}}</text>
+        </view>
+        <view class='top_b'>
+          <text class='iconfont icon-shangpinwenduji'></text>
+          <text class='text text_b'>{{temperature}}</text>
+          <text class='iconfont icon-fengli'></text>
+          <text class='text text_b'>{{wind}}</text>
+          <text class='iconfont icon-kongqijiance' bindtap='aaa'></text>
+          <text class='text'>{{pm}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='center' id="center">
+      <view class='alarm' bindtap='noticetap'>
+        <view class='alarm_icon'>
+          <image src='../../images/laba.png'></image>
+        </view>
+        <view class='alarm_text'>
+          <text class='text1'>设备暂无报警</text>
+          <text class='text2'>设备暂无报警</text>
+        </view>
+        <view class='alarm_time'>
+          <text class='time_1'>3小时前</text>
+          <text class='time_2'>1小时前</text>
+        </view>
+        <view class='right_icon'>
+          <text class='iconfont icon-youjiantou1'></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view class='scroll-t' scroll-y="true" style='height:{{scrollViewHeith}}px'>
+    <view class='down' wx:for="{{data}}" wx:key="no">
+      <text class='text_d'>{{item.areaName}}</text>
+      <view class='box' wx:for="{{item.units}}" wx:for-item="units" wx:key="name">
+        <view class='one' bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd" bindlongtap="bingLongTap" bindtap="bindTap" id="{{units.id}}" data-name="{{units.name}}" data-num='{{units.serialNum}}'>
+          <view class='one_icon'>
+            <text class='iconfont icon-dapeng'></text>
+          </view>
+          <view class='one_text'>
+            <text class='one_1'>{{units.name}}</text>
+            <text class='one_2'>模式：{{units.model}}</text>
+          </view>
+          <view class='one_image' wx:if="{{units.online ==true}}">
+            <text class='iconfont icon-zaixian'></text>
+            <text class='text'>在线</text>
+          </view>
+          <view class='one_image' wx:elif="{{units.online ==false}}">
+            <text class='iconfont icon-zhuangtailixian'></text>
+            <text class='text'>离线</text>
+          </view>
+        </view>
+        <view class='tow'>
+          <block wx:for="{{units.params}}" wx:for-item="params" wx:key="params">
+            <view class='icon_box' wx:if="{{params.type == 1}}">
+              <text class='iconfont icon-shangpinwenduji'></text>
+              <text class='tow_1'>{{params.number}}</text>
+            </view>
+            <view class='icon_box' wx:if="{{params.type == 2}}">
+              <text class='iconfont icon-water_icon'></text>
+              <text class='tow_1'>{{params.number}}</text>
+            </view>
+            <view class='icon_box' wx:if="{{params.type == 11}}">
+              <text class='iconfont icon-yu'></text>
+              <text class='tow_1'>{{params.number}}</text>
+            </view>
+            <view class='icon_box' wx:if="{{params.type == 3}}">
+              <text class='iconfont icon-dengpao'></text>
+              <text class='tow_1'>{{params.number}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,40 @@
+<view class="container"> 
+ <view class="login-icon"> 
+   <text class='iconfont icon-yonghu' style='font-size:80px;'></text>
+ </view> 
+
+ <view class="login-from"> 
+   <view class="inputView"> 
+    <text class='iconfont icon-yonghu2'></text>
+    <input class="inputText"placeholder="用户名"focus="{{focus}}" bindinput="userNameInput"/>
+   </view> 
+ <view class="line"></view> 
+ <view class="inputView" wx:if ="{{pas == false}}"> 
+  <text class='iconfont icon-suo1'></text>  
+  <input class="inputText" placeholder="密码"bindinput="passwordInput" />
+  <text class='iconfont icon-yulan' bindtap='yulan'></text>
+ </view> 
+ <view class="inputView" wx:if ="{{pas == true}}"> 
+  <text class='iconfont icon-suo1'></text>  
+  <input class="inputText" placeholder="密码" password='true' bindinput="passwordInput" />
+  <text class='iconfont icon-yulan' bindtap='yulan'></text>
+ </view> 
+ <view class="line"></view>
+<checkbox-group class="checkboxGroup" bindchange="checkboxChange">
+  <checkbox  class="checkbox" value="{{item.name}}"/>
+  <text class="check-text">记住密码（记住密码有风险，请谨慎选择）</text>
+</checkbox-group>
+  
+ <view class="loginBtnView"> 
+  <button class="loginBtn"type="befault"loading="{{isLoading}}"disabled='{{isDisable}}' bindtap="loginBtnClick" hover-class="btnhover">登录</button> 
+ </view> 
+ <view class="end">
+   <text class='text1' bindtap='phone'>忘记密码？</text>
+   <text class='text2' bindtap='scanCode'>没有账号？点击注册</text>
+ </view>
+ 
+ </view> 
+ <view class='foot'>
+   <text>科技支撑发展 创新引领未来</text>
+ </view>
+</view>

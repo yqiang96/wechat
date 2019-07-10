@@ -1,0 +1,5 @@
+<button bindtap='startClick'>连接</button>
+<input class='text' bindinput='text'></input>
+<button bindtap='sendClick'>发送</button>
+<button bindtap='closeClick'>断开</button>
+<text>{{data}}</text>

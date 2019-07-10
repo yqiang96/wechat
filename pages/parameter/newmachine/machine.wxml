@@ -1,0 +1,73 @@
+<view class='container'>
+  <view class='content' wx:for="{{machine}}" wx:key="{{id}}">
+    <view class='box_a' id="{{item.id}}">
+      <view class='title_box'>放风口全程宽度</view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>宽度（厘米）</view>
+      <view class='content_right'>
+        <input class='text' placeholder='{{item.trackMaxLength}}'bindinput='trackMaxLength'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>开时间长（秒）</view>
+      <view class='content_right'>
+        <input class='text' placeholder='{{item.trackOpenTime}}'bindinput='trackOpenTime'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>放风口最大宽度</view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>宽度（厘米）</view>
+      <view class='content_right'>
+        <input class='text' placeholder='{{item.tuyereMaxWidth}}'bindinput='tuyereMaxWidth'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>开时间长（秒）</view>
+      <view class='content_right'>
+        <input class='text' placeholder='{{item.tuyereOpenTime}}'bindinput='tuyereOpenTime'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>可选的设备</view>
+    </view>
+    <view class='box_k'>
+      <checkbox-group class="checkb" wx:for="{{performers}}" wx:for-item='performers' wx:key="{{inx}}" bindchange="checkboxChange"data-index="{{performers.id}}">
+        <label class="checkboxs">
+          <checkbox value="{{performers.name}}" checked='{{performers.isChecked}}'>{{performers.name}}</checkbox>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>分级级数（级）</view>
+      <view class='content_input'>
+        <picker mode="selector" range="{{array}}" value="{{inx}}" bindchange="listenerPickerSelected">
+          <text>{{array[inx]}}</text>
+        </picker>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>是否有限位开关</view>
+      <view class='content_right'>
+        <view class="body-view">
+          <switch color='#000000' checked="{{item.isLimit}}" bindchange="switch1Change" />
+        </view>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>是否有计数器</view>
+      <view class='content_right'>
+        <view class="body-view">
+          <switch color='#000000' checked="{{item.isCount}}" bindchange="switch2Change" />
+        </view>
+      </view>
+    </view>
+    <view class='box_btn'>
+      <button class='btn' bindtap='sub'>保存</button>
+    </view>
+
+
+  </view>
+</view>

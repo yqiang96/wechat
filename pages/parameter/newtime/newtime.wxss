@@ -1,0 +1,139 @@
+/* pages/parameter/newtime/newtime.wxss */
+@import "../../../libs/libs.wxss";
+.container{
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.box_a{
+  width: 100%;
+  height: 30px;
+  display: flex;
+}
+.title_box{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.box_time{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.picker_box{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrapl;
+}
+.picker{
+  width: 50%;
+  height: 50%;
+  padding: 25px;
+  background-color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+}
+.box_radio{
+  width: 100%;
+  /* height: 80px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radio-group{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.radio-group>label{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.last{
+  height: 30px;
+}
+.content_left{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.content_right{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_right>input{
+  width: 80%;
+  height: 20px;
+  border: 2px solid #bebebe;
+  border-radius: 5px;
+}
+.content_box{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.box_btn{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  margin-top: 20px;
+}
+.box_k{
+  width: 80%;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkb{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+checkbox-group>.checkboxs{
+  width: 100%;
+  height: 30px;
+  display: flex;
+}
+.btn{
+  width: 80%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #66a2ff;
+  border-radius: 10px;
+  color: white;
+}
+radio{
+  zoom: 70%;
+}
+.text_time{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+}

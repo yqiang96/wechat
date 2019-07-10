@@ -1,0 +1,32 @@
+<!-- 我的设备 -->
+ <view class='container'>
+  <view class='centant' wx:for="{{data}}" wx:key="{{id}}"bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd"bindlongtap="bingLongTap"bindtap="bindTap" id="{{item.serialNumber}}">
+    <view class='centant_b'>
+      <view class='box_l'>
+        <text>设备序列号:</text>
+      </view>
+      <view class='box_r'>
+        <text>{{item.serialNumber}}</text>
+      </view>
+    </view>
+    <view class='center' wx:for="{{item.devices}}" wx:key="{{no}}" wx:for-item="devices">
+      <view class='centant_box'>
+        <view class='box_left'>
+          <text>设备名称:</text>
+        </view>
+        <view class='box_right'>
+          <text>{{devices.name}}</text>
+        </view>
+      </view>
+      <view class='centant_box'>
+        <view class='box_left'>
+          <text>设备当前状态:</text>
+        </view>
+        <view class='box_right'>
+          <text>{{devices.statut}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

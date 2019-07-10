@@ -1,0 +1,149 @@
+.container{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  align-items: center;
+}
+.content{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+.content_box{
+  display: flex;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #bebebe;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.icon{
+  width: 15%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon>text{
+  color: #707070;
+}
+.keyImage { 
+  display: flex;  
+  width: 20px; 
+  height: 20px
+}
+.input{
+  width: 85%;
+  height: 30px;
+}
+.inputText{
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+}
+.content_b{
+  display: flex;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.content_input{
+  display: flex;
+  width: 65%;
+  height: 30px;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+}
+.input_icon{
+  width: 25%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.input_icon>text{
+  color: #707070;
+}
+.c_input{
+  width: 75%;
+  height: 30px;
+  display: flex;
+}
+.content_btn{
+  width: 35%;
+  height: 30px;
+  margin-left: 5px;
+}
+.btn{
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #66a2ff;
+  color: #66a2ff;
+  font-size: 14px;
+  padding: 0
+}
+.input_b{
+   width: 70%;
+  height: 30px;
+}
+.icon_b{
+  width: 15%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bebebe;
+}
+.icon_b>text{
+  color: #707070;
+}
+.btn_left{
+  width: 50%;
+  height: 30px;
+  display: flex;
+}
+.btn_right{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.button{
+  width: 70%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #66a2ff;
+  color: white;
+  padding: 0;
+  font-size: 14px;
+}
+.content_bor{
+  display: flex;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.select_box{
+  background: #fff;
+  width: 85%;
+  /* margin: 30px auto; */
+  position: relative;
+}
+.select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.content>form{
+  display: flex;
+  width: 100%;
+}

@@ -1,0 +1,55 @@
+<view class='container'>
+  <view class='top'>
+    <view class='top_icon'>
+      <image class='topicon' src='../../images/06.png'></image>
+    </view>
+    <view class='top_text'>
+      <text>{{username}}</text>
+    </view>
+    <view class='top_text' bindtap='test'>
+      <text>{{rolename}}</text>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='content_box'>
+      <view class='key'>
+        <text>邮箱</text>
+      </view>
+      <view class='value'>
+        <text>{{email}}</text>
+      </view>
+    </view>
+    <view class='content_box'>
+      <view class='key'>
+        <text>地址</text>
+      </view>
+      <view class='value'>
+        <text>{{address}}</text>
+      </view>
+    </view>
+    <view class='content_box'>
+      <view class='key'>
+        <text>姓名</text>
+      </view>
+      <view class='value'>
+        <text>{{realname}}</text>
+      </view>
+    </view>
+    <view class='content_box'>
+      <view class='key'>
+        <text>职务</text>
+      </view>
+      <view class='value'>
+        <text>{{post}}</text>
+      </view>
+    </view>
+    <view class='content_box'>
+      <view class='key'>
+        <text>公司名称</text>
+      </view>
+      <view class='value'>
+        <text>{{companyname}}</text>
+      </view>
+    </view>
+  </view>
+</view>

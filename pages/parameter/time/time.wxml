@@ -1,0 +1,58 @@
+<!--pages/parameter/time/time.wxml-->
+<view class='container'>
+  <view class='content'>
+    <view class='box_a'>
+      <view class='title_box'>选择时间</view>
+    </view>
+    <view class='box_time'>
+      <picker class='picker_box' mode="time" value="{{startTime}}" start="09:01" end="21:01" bindchange="bindStartTime">
+        <view class='text_time'>开始时间</view>
+        <view class="picker">{{startTime}}</view>
+      </picker>
+      <picker class='picker_box' mode="time" value="{{endTime}}" start="09:01" end="21:01" bindchange="bindEndTime">
+        <view class='text_time'>结束时间</view>
+        <view class="picker">{{endTime}}</view>
+      </picker>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>重复</view>
+    </view>
+    <view class='box_radio'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for-items="{{items}}" wx:key="value">
+          <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>重复周期数（天)</view>
+      <view class='content_right'>
+        <input class='text'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>执行的控制指令</view>
+    </view>
+    <view class='box_radio'>
+      <radio-group class="radio-group last" bindchange="radio2">
+        <label class="radio" wx:for-items="{{items2}}" wx:key="value2">
+          <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+    <view class='box_a'>
+      <view class='content_box'>选择关联的设备或者大棚</view>
+    </view>
+    <view class='box_k'>
+      <checkbox-group class="checkb" wx:for="{{performers}}" wx:for-item='performers' wx:key="{{inx}}" bindchange="checkboxChange" data-index="{{performers.id}}">
+        <label class="checkboxs">
+          <checkbox value="{{performers.name}},{{performers.id}}">{{performers.name}}</checkbox>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class='box_btn'>
+      <button class='btn' bindtap='time'>保存</button>
+    </view>
+
+  </view>
+</view>

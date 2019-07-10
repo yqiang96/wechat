@@ -1,0 +1,131 @@
+.container{
+  align-items: center;
+  justify-content: center;
+}
+.content{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+.box_a{
+  width: 100%;
+  height: 30px;
+  display: flex;
+}
+.content_left{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_right{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+.content_right>input{
+  width: 93%;
+  height: 30px;
+  border-bottom: 1px solid #bebebe;
+}
+.content_input{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content_input>input{
+  width: 93%;
+  height: 20px;
+  border: 1px solid #bebebe;
+}
+.center{
+  text-align: center;
+}
+.title_box{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.box_c{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box_b{
+  width: 50%;
+  height: 30px;
+  display: flex;
+}
+.box_b>button{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.box_b>input{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  border-bottom: 1px solid #bebebe;
+  padding-left: 35px;
+}
+.box_d{
+  width: 100%;
+  height: 30px;
+  color: #bebebe;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+.box_btn{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  margin-top: 20px;
+}
+.btn{
+  width: 80%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #66a2ff;
+  border-radius: 10px;
+  color: white;
+}
+.box_k{
+  width: 85%;
+  /* height: 60px; */
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.checkb{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+checkbox-group>.checkboxs{
+  width: 100%;
+  height: 30px;
+  display: flex;
+}
+input{
+  font-size: 12px;
+  padding-left: 35px;
+}

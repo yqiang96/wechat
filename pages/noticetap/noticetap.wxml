@@ -1,0 +1,115 @@
+<view class='container'>
+  <view class='top'>
+    <view class='nav'>
+      <view class="navbar">  
+        <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ?               'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+      </view>  
+    </view>
+  </view>
+  <view hidden="{{currentTab!==0}}"> 
+    <scroll-view scroll-y="true" style='height:460px;'>
+      <view class='content'>
+        <view class='notice'>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警类型：</text>
+            </view>
+            <view class='notice_right'>
+              <text>参数超限报警</text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>危险指数：</text>
+            </view>
+            <view class='notice_right'>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing1"></text>
+              <text class="iconfont icon-xing1"></text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警时间：</text>
+            </view>
+            <view class='notice_right'>
+              <text>2018-03-16</text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警设备：</text>
+            </view>
+            <view class='notice_right'>
+              <text>温度传感器1——大棚1</text>
+            </view>
+          </view>
+
+          <view class='notice_last'>
+             <view class='notice_laft'>
+              <text>报警详情：</text>
+            </view>
+            <view class='notice_right'>
+            </view>
+          </view>
+        </view>
+        <view class='notice'>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警类型：</text>
+            </view>
+            <view class='notice_right'>
+              <text>电机故障报警</text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>危险指数：</text>
+            </view>
+            <view class='notice_right'>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing"></text>
+              <text class="iconfont icon-xing1"></text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警时间：</text>
+            </view>
+            <view class='notice_right'>
+              <text>2018-03-16</text>
+            </view>
+          </view>
+          <view class='notice_content'>
+            <view class='notice_laft'>
+              <text>报警设备：</text>
+            </view>
+            <view class='notice_right'>
+              <text>温度传感器1——大棚1</text>
+            </view>
+          </view>
+
+          <view class='notice_last'>
+             <view class='notice_laft'>
+              <text>报警详情：</text>
+            </view>
+            <view class='notice_right'>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>  
+  </view>
+  <view hidden="{{currentTab!==1}}">  
+    <scroll-view scroll-y="true" style='height:380px;'>
+      <view class='content'>
+
+
+      </view>
+    </scroll-view>
+  </view>
+</view>

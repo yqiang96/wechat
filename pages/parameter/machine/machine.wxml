@@ -1,0 +1,73 @@
+<view class='container'>
+  <view class='content'>
+    <view class='box_a'>
+      <view class='title_box'>放风口全程宽度</view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>宽度（厘米）</view>
+      <view class='content_right'>
+        <input class='text' placeholder='填写全程宽度' bindinput='trackMaxLength'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>开时间长（秒）</view>
+      <view class='content_right'>
+        <input class='text' placeholder='填写全程开时间长' bindinput='trackOpenTime'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>放风口最大宽度</view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>宽度（厘米）</view>
+      <view class='content_right'>
+        <input class='text' placeholder='填写全程宽度' bindinput='tuyereMaxWidth'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='content_left'>开时间长（秒）</view>
+      <view class='content_right'>
+        <input class='text' placeholder='填写全程开时间长' bindinput='tuyereOpenTime'></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>可选的设备</view>
+    </view>
+    <view class='box_k'>
+      <checkbox-group class="checkb" wx:for="{{performers}}" wx:for-item='performers' wx:key="{{inx}}" bindchange="checkboxChange"data-index="{{performers.id}}">
+        <label class="checkboxs"> 
+          <checkbox class='check_box' value="{{performers.name}},{{performers.id}}">{{performers.name}}</checkbox>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class='box_a'>
+      <view class='content_l'>分级级数（级）</view>
+      <view class='content_input'>
+        <picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
+          <text>{{array[index]}}</text>
+        </picker>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='content_l'>是否有限位开关</view>
+      <view class='content_right'>
+        <view class="body-view">
+          <switch color='#66a2ff' checked bindchange="switch1Change" />
+        </view>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='content_l'>是否有计数器</view>
+      <view class='content_right'>
+        <view class="body-view">
+          <switch color='#66a2ff' checked bindchange="switch2Change" />
+        </view>
+      </view>
+    </view>
+    <view class='box_btn'>
+      <button class='btn' hover-class='hover' bindtap='sub'>保存</button>
+    </view>
+
+
+  </view>
+</view>

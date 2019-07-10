@@ -1,0 +1,16 @@
+<!--pages/phone/phone.wxml-->
+<view class='contioner'>
+  <view class='centant'>
+    <input class='text'placeholder='输入手机号'bindinput='getPhoneValue'maxlength="11" value='{{phone}}'></input>
+    <view class='verification'>
+      <input class='text' placeholder='输入验证码' bindinput='getCodeValue'></input>
+      <button class='btn' bindtap='getCode'disabled='{{disabled}}'>{{codename}}</button>
+    </view>
+    <input class='text' placeholder='输入新密码' bindinput='getpas'></input>
+    <input class='text' placeholder='再次输入新密码' bindinput='getpas2'></input>
+    <button class='btn' bindtap='formsub'>确定</button>
+    <view class='centant_text'>
+      <text bindtap='Email'>手机号不能使用？</text>
+    </view>
+  </view>
+</view>

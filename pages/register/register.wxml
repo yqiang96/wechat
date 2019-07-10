@@ -1,0 +1,100 @@
+<!--pages/register/register.wxml-->
+<view class='container'>
+  <view class='content'>
+    <form bindsubmit='formSubmit' bindreset='formReset'>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-yonghu1" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="userName" placeholder='输入用户名' value='{{name}}'></input>
+        </view>
+      </view>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-phone" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="phone" maxlength="11" bindinput='getPhoneValue' placeholder='输入手机号' value='{{phone}}'></input>
+        </view>
+      </view>
+      <view class='content_b'>
+        <view class='content_input'>
+          <view class='input_icon'>
+            <text class="iconfont icon-auth" style='font-size:20px;'></text>
+          </view>
+          <view class='c_input'>
+            <input class='inputText' value='{{code}}' placeholder='输入验证码'></input>
+          </view>
+        </view>
+        <view class='content_btn'>
+          <button class='btn' bindtap='getVerificationCode' disabled='{{disabled}}'>{{codename}}</button>
+        </view>
+      </view>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-ai-password" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="password" placeholder='输入密码'>{{password}}</input>
+        </view>
+      </view>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-ai-password" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="password2" placeholder='再次输入密码'>{{password2}}</input>
+        </view>
+      </view>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-youxiang" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="email" placeholder='输入邮箱'>{{email}}</input>
+        </view>
+      </view>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-dizhi" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="address" placeholder='输入公司地址'>{{address}}</input>
+        </view>  
+      </view>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-gongsimingcheng" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="companyName" placeholder='公司名称'>{{companyName}}</input>
+        </view>
+      </view>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-yonghu1" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="realName" placeholder='真实姓名'>{{realName}}</input>
+        </view>
+      </view>
+      <view class='content_box'>
+        <view class='icon'>
+          <text class="iconfont icon-zhiwu" style='font-size:20px;'></text>
+        </view>
+        <view class='input'>
+          <input class='inputText' name="post" placeholder='职务'>{{post}}</input>
+        </view>
+      </view>
+      <view class='content_bor'>
+        <view class='btn_left'>
+          <button class='button' formType="reset">取消</button>
+        </view>
+        <view class='btn_right'>
+          <button class='button' formType="submit">注册</button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

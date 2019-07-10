@@ -1,0 +1,24 @@
+<!--pages/useradd/ment/ment.wxml-->
+<view class='container'>
+  <view class='form_input'>
+    <view class='user'>
+      <text>用户名：</text>
+    </view>
+    <view class='input_b'>
+      <input class='name'placeholder="请输入用户名或者手机号码" bindinput="userNameInput" />
+    </view>
+  </view>
+  <view class="section section_gap">
+    <view class="section_title">管理的大棚</view>
+  </view>
+  <view class='box_a'>
+    <checkbox-group class="checkb" wx:for="{{performers}}" wx:for-item='performers' wx:key="{{inx}}" bindchange="checkboxChange" data-index="{{performers.id}}">
+      <label class="checkboxs">
+        <checkbox value="{{performers.name}}" checked='{{performers.isChecked}}'>{{performers.name}}</checkbox>
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="btn-area">
+    <button class='btn' bindtap='submit'>保存设置</button>
+  </view>
+</view>

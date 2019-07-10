@@ -1,0 +1,60 @@
+<view class='container'>
+  <view class='content'>
+    <view class='box_a'>
+      <view class='title_box'>传感器</view>
+      <view class='box_b'>
+        <button bindtap='sensorId'>{{sensorName}}<text class="iconfont icon-jiantou9" style='font-size:14px;'></text></button>
+        <text></text>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>标准湿度（%）</view>
+      <view class='box_b'>
+        <input placeholder='标准湿度' bindinput="standardHumidity"></input>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>适宜湿度范围（%）</view>
+    </view>
+    <view class='box_a'>
+      <view class='box_c'>
+        <view class='box_b'>
+          <input placeholder='湿度下限值'bindinput="suitableLower"></input>
+        </view>
+        <view>~</view>
+        <view class='box_b'>
+          <input placeholder='湿度上限值'bindinput="suitableUpper"></input>
+        </view>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>报警湿度范围（%）</view>
+    </view>
+    <view class='box_a'>
+      <view class='box_c'>
+        <view class='box_b'>
+          <input placeholder='湿度下限值'bindinput="alarmLower"></input>
+        </view>
+        <view>~</view>
+        <view class='box_b'>
+          <input placeholder='湿度上限值'bindinput="alarmUpper"></input>
+        </view>
+      </view>
+    </view>
+    <view class='box_a'>
+      <view class='title_box'>可选择的设备</view>
+    </view>
+    <view class='box_k'>
+      <checkbox-group class="checkb" wx:for="{{performers}}" wx:for-item='performers' wx:key="{{inx}}" bindchange="checkboxChange" data-index="{{performers.id}}">
+        <label class="checkboxs">
+          <checkbox value="{{performers.name}},{{performers.id}}">{{performers.name}}</checkbox>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class='box_btn'>
+      <button class='btn' bindtap='sub'>保存</button>
+    </view>
+
+
+  </view>
+</view>

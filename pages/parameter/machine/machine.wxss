@@ -1,0 +1,118 @@
+/* pages/parameter/machine/machine.wxss */
+.container{
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.box_a{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box_k{
+  width: 80%;
+  /* height: 60px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.title_box{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  /* background-color: #bebebe */
+}
+.content_left{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.content_l{
+  width: 45%;
+  height: 30px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  padding-left: 10px;
+}
+.content_right{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.content_right>input{
+  width: 93%;
+  height: 30px;
+  border-bottom: 1px solid #bebebe;
+  font-size: 12px;
+}
+.checkb{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: 10px; */
+}
+checkbox-group>.checkboxs{
+  width: 90%;
+  height: 30px;
+  display: flex;
+}
+/* .check_box{
+  zoom: 70%;
+} */
+switch{
+  -webkit-tap-highlight-color: #66a2ff
+}
+.box_b{
+  width: 100%;
+  height: 30px;
+  color: #bebebe;
+  display: flex;
+  align-items: center;
+}
+.content_input{
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center{
+  text-align: center;
+}
+.box_btn{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  margin-top: 20px;
+}
+.btn{
+  width: 80%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #66a2ff;
+  border-radius: 10px;
+  color: white;
+}
+.hover{
+  box-shadow: 2px 2px 2px #a6a6a7;
+}

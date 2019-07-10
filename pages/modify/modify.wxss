@@ -1,0 +1,46 @@
+/* pages/modify/modify.wxss */
+.contioner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.centant{
+  width: 80%;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin:20px 0 0 0;
+}
+.centant>input{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  padding-left: 10px;
+}
+button{
+  width: 100%;
+  height: 40px;
+  background-color: #66a2ff;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.centant_text{
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  font-size: 14px;
+  color: #00A8D8;
+}

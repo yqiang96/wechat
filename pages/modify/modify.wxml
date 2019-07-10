@@ -1,0 +1,12 @@
+<!--pages/modify/modify.wxml-->
+<view class='contioner'>
+  <view class='centant'>
+    <input class='text' placeholder='输入原密码' placeholder-class='style' bindinput='oldpassword'></input>
+    <input class='text' placeholder='输入新密码' placeholder-class='style' bindinput='newpassword'></input>
+    <input class='text'placeholder='再次输入新密码'placeholder-class='style'bindinput='toopassword'></input>
+    <button class='btn' bindtap='DetermineBtn'>确定</button>
+    <view class='centant_text'>
+      <text bindtap='phone'>忘记原密码？</text>
+    </view>
+  </view>
+</view>

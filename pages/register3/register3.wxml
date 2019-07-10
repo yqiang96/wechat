@@ -1,0 +1,12 @@
+<!--pages/register3/register3.wxml-->
+<view class='container'>
+  <view class='title'>
+    <text>输入设备序列号</text>
+  </view>
+  <view class='content'>
+    <input class='box' bindinput='serialNumber' value="{{serialNumber}}"></input>
+  </view>
+  <view class='b_box'>
+    <button class='btn' bindtap='register'>确定</button>
+  </view>
+</view>

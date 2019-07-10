@@ -1,0 +1,40 @@
+<!--pages/home/aboutus/aboutus.wxml-->
+<view class='content'>
+  <view class='content_icon'>
+    <image src='../../../images/2.png'></image>
+  </view>
+  <view class='content_text'>
+    <view class='text_left'>
+      <text>公司名称：</text>
+    </view>
+    <view class='text_right'>
+      <text>深圳神秾智能科技有限公司</text>
+    </view>
+  </view>
+  <view class='content_text'>
+    <view class='text_left'>
+      <text>公司地址：</text>
+    </view>
+    <view class='text_right'>
+      <text>龙华区</text>
+    </view>
+  </view>
+  <view class='content_text'>
+    <view class='text_left'>
+      <text>电话：</text>
+    </view>
+    <view class='text_right'>
+      <text>0795-88888888</text>
+    </view>
+  </view>
+  <view class='content_text'>
+    <view class='text_left'>
+      <text>公司介绍：</text>
+    </view>
+    <view class='text_right'>
+    </view>
+  </view>
+  <view class='box'>
+    <text>公司致力于打造智慧农业物联网....</text>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+/* pages/home/aboutus/aboutus.wxss */
+.content{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 14px;
+}
+.content_icon{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_icon>image{
+  width: 100%;
+  height: 100%;
+  
+}
+.content_text{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text_left{
+  width: 30%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.text_right{
+  width: 60%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.box{
+  width: 90%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

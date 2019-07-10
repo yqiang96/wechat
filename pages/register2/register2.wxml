@@ -1,0 +1,87 @@
+<!--pages/register2/register2.wxml-->
+<view class='container'>
+  <view class='title'>
+    <text>执行设备</text>
+  </view>
+  <view class='content'>
+    <view class="content_box" wx:for="{{performers}}" wx:key="{{id}}" wx:for-index="idx">
+      <view class='left'>
+        <text>{{item.channelName}}</text>
+      </view>
+      <view class='cont'>
+        <view class='select_box'>
+          <view class='select'>
+            <picker class='picker' range="{{item.name}}" value="{{item.index}}" data-current="{{idx}}" range-key="{{'name'}}" bindchange="bindPickerChange">
+              <text class='select_text'>{{item.name[item.index].name}}</text>
+            </picker>
+          </view>
+        </view>
+      </view>
+      <view class='right'>
+        <checkbox-group bindchange="checkbox" data-current="{{idx}}">
+          <checkbox class="checkbox" value="{{item.checkbox}}" checked="{{item.checked}}"/>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+  <view class='notes'>
+    <text>注:当接口3接入双向设备时,接口4不可再接入</text>
+  </view>
+  <view class='title'>
+    <text>传感设备</text>
+  </view>
+  <view class='content'>
+    <view class='content_box' wx:for="{{sensors}}" wx:key="{{no}}" wx:for-index="idx">
+      <view class='left'>
+        <text>{{item.channelName}}</text>
+      </view>
+      <view class='cont'>
+        <view class='select_box'>
+          <view class='select'>
+            <picker range="{{item.name}}" value="{{item.index}}" data-current="{{idx}}" range-key="{{'name'}}" bindchange="bindPickerChange2">
+              <text class='select_text'>{{item.name[item.index].name}}</text>
+            </picker>
+          </view>
+        </view>
+      </view>
+      <view class='right'>
+        <checkbox-group bindchange="checkbox2" data-current="{{idx}}">
+          <checkbox class="checkbox" value="{{item.checkbox}}" checked="{{item.checked}}"/>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='content_box'>
+      <view class='left_b'>
+        <text>{{area.channel}}</text>
+      </view>
+      <view class='cont_b'>
+        <view class='select_box'>
+          <input class="inputText" bindinput="areaInput" />
+        </view>
+      </view>
+      <view class='right_b'>
+
+      </view>
+    </view>
+    <view class='content_box'>
+      <view class='left_b'>
+        <text>{{unit.channel}}</text>
+      </view>
+      <view class='cont_b'>
+        <view class='select_box'>
+          <input class="inputText" bindinput="unitInput" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='btn_left'>
+      <button bindtap='regist'>取消</button>
+    </view>
+    <view class='btn_right'>
+      <button bindtap='sub'>注册</button>
+    </view>
+  </view>
+</view>

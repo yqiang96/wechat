@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='centant'>
+    <block wx:for="{{user}}" wx:for-index='id' wx:for-item='item' wx:key="{{id}}">
+      <view class='box'bindtap="user"bindlongtap="longTap" data-id='{{id}}' bindtouchstart="touchStart" bindtouchend="touchEnd">
+        <image src='../../images/06.png'></image>
+        <view class='box_text'>
+          <text>{{item.userName}}</text>
+        </view>
+        <view class='box_icon'>
+          <text class='iconfont icon-youjiantou1'></text>
+        </view>
+      </view>
+    </block>
+    <view class='box_dashet' bindtap='useradd'>
+      <view class='box_jia'>
+        <text class='iconfont icon-jiahao'></text>
+      </view>
+      <view class='jia_text'>
+        <text>添加操作员</text>
+      </view>
+    </view>
+  </view>
+</view>

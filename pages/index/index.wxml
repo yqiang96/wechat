@@ -1,0 +1,108 @@
+<view class="container">
+  <view class='up' id="up">
+    <view class="head">
+      <view class="box_bg">
+        <scroll-view scroll-x="true" style="white-space:nowrap; height:100%; white:{{windowWidth}}px">
+          <view class='box_h'>
+            <view class='box_z'>
+              <block wx:for="{{sensors}}" wx:key='{{no}}' wx:for-item='sensors'>
+                <view class="box_mg">
+                  <view class='box_text'>
+                    <text class="text1 iconfont icon-wendu">{{sensors.curValue}}</text>
+                    <text class="text3">{{sensors.name}}</text>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="central">
+        <view class='one_box'>
+          <view class="box" bindtap='allopen'>
+            <button class='cricle b_left' hover-class='btnhover1'>
+              <text class="iconfont icon-kaishi"></text>
+            </button>
+          </view>
+          <view class='box' bindtap='allshut'>
+            <button class='cricle b_cont' hover-class='btnhover2'>
+              <text class="iconfont icon-guanbi2"></text>
+            </button>
+          </view>
+          <view class="box" bindtap='deviceModel'>
+            <view class='cricleb a_cont' hover-class='btnhover'>
+              <view class='criclec'>{{Model}}</view>
+            </view>
+          </view>
+          <view class="box" bindtap='allwet'>
+            <button class="cricle c_cont" hover-class='btnhover3'>
+              <text class="iconfont icon-chushi"></text>
+            </button>
+          </view>
+          <view class="box" bindtap='allwind'>
+            <button class="cricle d_cont" hover-class='btnhover4'>
+              <text class="iconfont icon-101"></text>
+            </button>
+          </view>
+        </view>
+        <view class="tow_text">
+          <text class="c_start">一键全开</text>
+          <text class="c_start">一键全关</text>
+          <text class="c_start">模式</text>
+          <text class="c_start">一键除湿</text>
+          <text class="c_start">一键放风</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <scroll-view class='scroll-t' scroll-y="true" style='height:{{scrollViewHeith}}px'>
+    <view class='tail'>
+      <block wx:for="{{performers}}" wx:key="{{no}}" wx:for-item='performers'>
+      <view class='tail_box'>
+        <view class='left'>
+          <view class='left_box'>
+            <text class="iconfont icon-101"></text>
+          </view>
+        </view>
+        <view class='center'>
+          <text class='center_1'>{{performers.name}}</text>
+          <text class='center_2'>运行状态：</text>
+          <text class='center_3'>{{performers.workStatut}}</text>
+          <text class='center_4'>已打开{{performers.workResult}}厘米</text>
+        </view>
+        <view class='right'>
+          <view class="box2">
+            <button class="cricle2" data-channel='{{performers.channel}}' hover-class='btnhover' bindtap="showDialogBtn">
+              <text class="iconfont icon-guanbi1"></text>
+            </button>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+  </scroll-view>
+  <!--弹窗-->
+      <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+      <view class="modal-dialog" wx:if="{{showModal}}">
+        <view class="modal-content">
+          <view class='left_b'>
+            <view class="btn-cancel" bindtap="onCancel" hover-class='btnhover2'>
+              <image src='../../images/kaishi.png'></image>
+            </view>
+            <text>{{open}}</text>
+          </view>
+          <view class='center_b'>
+            <view class="btn-confirm" bindtap="onConfirm" hover-class='btnhover1'>
+              <image src='../../images/ting.png'></image>
+            </view>
+            <text>停</text>
+          </view>
+          <view class='right_b'>
+            <view class="btn-right" bindtap="onRight" hover-class='btnhover'>
+              <image src='../../images/guanbi.png'></image>
+            </view>
+            <text>关</text>
+          </view>
+        </view>
+      </view>
+</view>
